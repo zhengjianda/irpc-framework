@@ -2,31 +2,42 @@ package irpc.framework.core.common.config;
 
 public class ClientConfig {
 
-    private Integer port;
+    private String applicationName;
 
-    private String serverAddr;
+    private String registerAddr;
 
-    public Integer getPort() {
-        return port;
+    private String proxyType;
+
+    public String getProxyType() {
+        return proxyType;
     }
 
-    public void setPort(Integer port) {
-        this.port = port;
+    public void setProxyType(String proxyType) {
+        this.proxyType = proxyType;
     }
 
-    public String getServerAddr() {
-        return serverAddr;
-    }
-
-    public void setServerAddr(String serverAddr) {
-        this.serverAddr = serverAddr;
+    public String getRegisterAddr() {
+        return registerAddr;
     }
 
     @Override
     public String toString() {
         return "ClientConfig{" +
-                "port=" + port +
-                ", serverAddr='" + serverAddr + '\'' +
+                "applicationName='" + applicationName + '\'' +
+                ", registerAddr='" + registerAddr + '\'' +
+                ", proxyType='" + proxyType + '\'' +
                 '}';
+    }
+
+    public void setRegisterAddr(String registerAddr) {
+        this.registerAddr = registerAddr;
+    }
+
+    public String getApplicationName() {
+        return applicationName;
+    }
+
+    public void setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
     }
 }
